@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import logoImg from "../assets/5_No_background.png";
+
 
 const Nav = styled.nav`
   display: flex;
@@ -11,11 +13,15 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled(Link)`
-  font-weight: 700;
-  color: #a9adc2;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+`;
+
+const LogoImg = styled.img`
+  height: 90px;
+  width: auto;
+  margin-right: 12px;
 `;
 
 const Menu = styled.div`
@@ -133,12 +139,13 @@ export default function Header() {
 
   return (
     <Nav>
-      <Logo to="/">Ladyjustice</Logo>
-
+      <Logo to="/">
+        <LogoImg src={logoImg} alt="snowLEX logo" />
+        
+      </Logo>
       <Menu>
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/about">About</MenuLink>
-
         <Dropdown>
           <DropdownToggle
             onClick={(e) => {
@@ -149,7 +156,6 @@ export default function Header() {
             Services
             <Arrow>{serviceOpen ? "▲" : "▼"}</Arrow>
           </DropdownToggle>
-
           {serviceOpen && (
             <DropdownMenu onClick={(e) => e.stopPropagation()}>
               <DropdownItem to="/pricing">Pricing</DropdownItem>
@@ -158,11 +164,8 @@ export default function Header() {
             </DropdownMenu>
           )}
         </Dropdown>
-
         <MenuLink to="/contact">Contact</MenuLink>
-  
       </Menu>
-
       <Login to="/login">Login</Login>
       <Button to="/get-started">Get started</Button>
     </Nav>
