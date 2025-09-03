@@ -11,7 +11,11 @@ import Footer from "./components/Footer";
 import ContactPage from "./components/ContactPage";
 import FaqPage from "./components/FaqPage";
 import PricingPage from "./components/PricingPage";
-import SubscribePage from "./components/SubscribePage"; // <-- Import Subscribe page
+import SubscribePage from "./components/SubscribePage"; 
+import LoginPage from "./components/LoginPage";      
+import Signup from "./components/signup";
+import Getstarted from "./components/Getstarted";    
+
 
 function MainLanding() {
   return (
@@ -27,6 +31,7 @@ function MainLanding() {
     </>
   );
 }
+
 
 function App() {
   return (
@@ -71,6 +76,36 @@ function App() {
               <>
                 <Header />
                 <SubscribePage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                <Header />
+                <LoginPage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/get-started"
+            element={
+              <>
+                <Header />
+                <Getstarted />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <>
+                <Header />
+                <Signup />
                 <Footer />
               </>
             }
