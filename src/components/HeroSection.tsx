@@ -101,12 +101,14 @@ export default function HeroSection() {
     <HeroContainer>
       <TextColumn>
         <BigTitle>
-          LadyJustice AI<br />
+          snowLEX AI<br />
           your Legal Assistant<br />
           in your pocket
         </BigTitle>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit phasellus mollis sit aliquam sit nullam neque ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.
+        SnowLEX AI is your AI assistant, here to make things faster, smarter, and easier for you. 
+        Whether you want quick answers, helpful insights, or step-by-step guidance, I’ve got you covered. 
+        Just ask, and let’s get started!”
         </Description>
         <Buttons>
           <PrimaryButton>call to action →</PrimaryButton>
