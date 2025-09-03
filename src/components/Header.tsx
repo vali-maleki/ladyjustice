@@ -19,7 +19,7 @@ const Logo = styled(Link)`
 `;
 
 const LogoImg = styled.img`
-  height: 90px;
+  height: 110px;
   width: auto;
   margin-right: 12px;
 `;
