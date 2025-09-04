@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logoImg from "../assets/5_No_background.png";
+//import logoImg from "../assets/5_No_background.png";
 
 
 const Nav = styled.nav`
@@ -140,7 +140,7 @@ export default function Header() {
   return (
     <Nav>
       <Logo to="/">
-        <LogoImg src={logoImg} alt="snowLEX logo" />
+        <img src="/SnowLEXlogo/snowLEXLogoWhiteBG.png" alt="Snowlex logo" />
         
       </Logo>
       <Menu>

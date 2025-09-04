@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logoImg from "../assets/5_No_background.png"; 
+
 
 const Container = styled.div`
   min-height: 100vh;
@@ -12,17 +12,24 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+const LogoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+
 const LogoImg = styled.img`
   height: 170px;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 `;
 
 const Title = styled.h1`
   color: #23235b;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 6px;
-  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
 `;
 
 const Subtitle = styled.p`
@@ -37,7 +44,14 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
+`;
+
+const Row2 = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 `;
 
 const Input = styled.input`
@@ -51,20 +65,14 @@ const Input = styled.input`
   outline: none;
 `;
 
-const Row = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: #bab6d2;
-  margin-bottom: 12px;
-`;
-
 const CheckboxLabel = styled.label`
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #bab6d2;
+  width: 100%;
 `;
 
 const Button = styled.button`
@@ -77,9 +85,9 @@ const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
-  letter-spacing: 0.8px;
   cursor: pointer;
   transition: background 0.15s;
+  letter-spacing: 0.7px;
   &:hover {
     background: #474562;
   }
@@ -88,39 +96,44 @@ const Button = styled.button`
 const FooterText = styled.div`
   color: #bab6d2;
   text-align: center;
-  font-size: 0.98rem;
+  font-size: 0.97rem;
 `;
 
-const SignUpLink = styled(Link)`
+const LoginLink = styled(Link)`
   color: #5D5A88;
   text-decoration: none;
   font-weight: 500;
   margin-left: 4px;
 `;
 
-export default function LoginPage() {
+export default function Signup() {
   return (
     <Container>
-      <LogoImg src={logoImg} alt="Logo" />
-      <Title>Welcome back!</Title>
-      <Subtitle>Log in to your existent account of LadyJustice</Subtitle>
+      <LogoBlock>
+        <img src="/SnowLEXlogo/5_No_background.png" alt="home logo" />  // I changed your method of uploading image
+      </LogoBlock>
+      <Title>Let's Get Started !</Title>
+      <Subtitle>
+        Create an account to LadyJustice AI to get all features
+      </Subtitle>
       <Form>
-        <Input type="text" placeholder="Email" />
+        <Row2>
+          <Input type="text" placeholder="Name" style={{ marginBottom: 0 }} />
+          <Input type="text" placeholder="Surname" style={{ marginBottom: 0 }} />
+        </Row2>
+        <Input type="email" placeholder="Email Address" />
+        <Input type="text" placeholder="Phone Number" />
         <Input type="password" placeholder="Password" />
-        <Row>
-          <CheckboxLabel>
-            <input type="checkbox" />
-            Remember Me
-          </CheckboxLabel>
-          <Link to="/forgot-password" style={{ color: "#bab6d2", textDecoration: "none" }}>
-            Forget Password ?
-          </Link>
-        </Row>
-        <Button type="submit">LOGIN</Button>
+        <Input type="password" placeholder="Confirm Password" />
+        <CheckboxLabel>
+          <input type="checkbox" />
+          I accept the Terms of use & Privacy Policy
+        </CheckboxLabel>
+        <Button type="submit">SIGN UP</Button>
       </Form>
       <FooterText>
-        Dont have an account?
-        <SignUpLink to="/signup">Sign Up</SignUpLink>
+        Already have an account?
+        <LoginLink to="/login">Login here</LoginLink>
       </FooterText>
     </Container>
   );

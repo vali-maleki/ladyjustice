@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logoImg from "../assets/5_No_background.png"; 
+//import logoImg from "../assets/5_No_background.png"; 
 const Container = styled.div`
   min-height: 100vh;
   background: #fff;
@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const LogoBlock = styled.div`
+const LogoBlock = styled.div`   //reduce the size of the logo here
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@ export default function LadyJusticeLogin() {
   return (
     <Container>
       <LogoBlock>
-        <LogoImg src={logoImg} alt="Logo" />
+        <img src="/SnowLEXlogo/LogoWhite.png" alt="home logo" />
       
       </LogoBlock>
       <Heading>Welcome to SnowLEXS</Heading>
