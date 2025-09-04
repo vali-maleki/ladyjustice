@@ -1,20 +1,20 @@
 import { GlobalStyle } from "./GlobalStyle";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import SignupPromo from "./components/SignupPromo";
-import ProcessSection from "./components/ProcessSection";
-import HowItWorks from "./components/HowItWorks";
-import Categories from "./components/Categories";
-import TeamSection from "./components/TeamSection";
-import Footer from "./components/Footer";
-import ContactPage from "./components/ContactPage";
-import FaqPage from "./components/FaqPage";
-import PricingPage from "./components/PricingPage";
-import SubscribePage from "./components/SubscribePage"; 
-import LoginPage from "./components/LoginPage";      
-import Signup from "./components/signup";
-import Getstarted from "./components/Getstarted";    
+import Header from "./components/Header/Header";
+import HeroSection from "./components/HeroSection/HeroSection";
+import SignupPromo from "./components/SignupPromo/SignupPromo";
+import ProcessSection from "./components/ProcessSection/ProcessSection";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
+import Categories from "./components/Categories/Categories";
+import TeamSection from "./components/TeamSection/TeamSection";
+import Footer from "./components/Footer/Footer";
+import ContactPage from "./components/ContactPage/ContactPage";
+import FaqPage from "./components/FaqPage/FaqPage";
+import PricingPage from "./components/PricingPage/PricingPage";
+import SubscribePage from "./components/SubscribePage/SubscribePage"; 
+import LoginPage from "./components/LoginPage/LoginPage";      
+import Signup from "./components/signup/signup";
+import Getstarted from "./components/Getstarted/Getstarted";    
 
 
 function MainLanding() {

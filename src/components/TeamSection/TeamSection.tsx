@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//<Avatar>👤<img src="/SnowLEXlogo/LogoBlack.png" alt="Snowlex logo" /></Avatar>
+
 const Section = styled.section`
   width: 100%;
   background: #fff;
@@ -191,7 +193,7 @@ export default function TeamSection() {
         <Subtitle>Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.</Subtitle>
         <CardRow>
           <Card>
-            <Avatar>👤</Avatar>
+            <Avatar><img src="/SnowLEXteam/FoundersFrederickKyle.jpg" alt="Frederick Kyle" /></Avatar>
             <Name>Frederick Kyle</Name>
             <Role>CEO & Co-Founder</Role>
             <SocialRow>
@@ -203,7 +205,7 @@ export default function TeamSection() {
             </SocialRow>
           </Card>
           <Card>
-            <Avatar>👤</Avatar>
+            <Avatar><img src="/SnowLEXteam/FoundersNatasha.jpg" alt="Natasha De Koker" /></Avatar>
             <Name>Natasha De Koker</Name>
             <Role>CEO & Co-Founder</Role>
             <SocialRow>

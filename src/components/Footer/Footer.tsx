@@ -108,7 +108,7 @@ export default function Footer() {
     <FooterSection>
       <Container>
         <LogoCol>
-          <Logo>Logo</Logo>
+          <Logo><img src="/SnowLEXlogo/LogoBlack.png" alt="Snowlex logo" /></Logo>
           <LogoDesc>Lorem ipsum dolor sit amet consectetur adipising elit aliquam mauris sed mo</LogoDesc>
           <SocialRow>
             <SocialIcon href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
