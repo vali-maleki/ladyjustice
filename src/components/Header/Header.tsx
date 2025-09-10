@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-//import logoImg from "../assets/5_No_background.png";
-
+import logoImg from "../../assets/No_background 1.png"; // Correct path
 
 const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 56px;
+  min-height: 120px;
+  padding: 0 56px;
   background: #fff;
 `;
 
@@ -16,10 +16,11 @@ const Logo = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  height: 110px;
 `;
 
 const LogoImg = styled.img`
-  height: 110px;
+  height: 270px;
   width: auto;
   margin-right: 12px;
 `;
@@ -30,6 +31,7 @@ const Menu = styled.div`
   align-items: center;
   flex: 1;
   justify-content: center;
+  height: 100%;
 `;
 
 const MenuLink = styled(Link)`
@@ -77,7 +79,7 @@ const DropdownMenu = styled.div`
   min-width: 140px;
   background: #fff;
   border: 1px solid #ebeaf5;
-  box-shadow: 0 6px 16px rgba(44, 45, 94, 0.08);
+  box-shadow: 0 6px 16px rgba(44,45,94,0.08);
   border-radius: 8px;
   z-index: 10;
   padding: 7px 0;
@@ -140,8 +142,7 @@ export default function Header() {
   return (
     <Nav>
       <Logo to="/">
-        <img src="/SnowLEXlogo/snowLEXLogoWhiteBG.png" alt="Snowlex logo" />
-        
+        <LogoImg src={logoImg} alt="SnowLEX logo" />
       </Logo>
       <Menu>
         <MenuLink to="/">Home</MenuLink>

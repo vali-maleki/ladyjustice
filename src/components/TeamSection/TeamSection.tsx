@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-//<Avatar>👤<img src="/SnowLEXlogo/LogoBlack.png" alt="Snowlex logo" /></Avatar>
-
 const Section = styled.section`
   width: 100%;
   background: #fff;
@@ -39,7 +37,7 @@ const Card = styled.div`
   background: #fff;
   border-radius: 18px;
   border: 1px solid #eaeaf3;
-  box-shadow: 0 2px 6px rgba(47,49,114,0.04);
+  box-shadow: 0 2px 6px rgba(47, 49, 114, 0.04);
   width: 320px;
   padding: 38px 24px 30px 24px;
   display: flex;
@@ -58,6 +56,13 @@ const Avatar = styled.div`
   justify-content: center;
   font-size: 3.5rem;
   color: #d5d9ec;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 `;
 
 const Name = styled.div`
