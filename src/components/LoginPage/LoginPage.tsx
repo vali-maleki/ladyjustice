@@ -106,16 +106,43 @@ const LogoBlock = styled.div`
 `;
 
 export default function LoginPage() {
+  // --- Login form handler ---
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+
+    const payload = {
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      password: (form.elements.namedItem('password') as HTMLInputElement).value,
+    };
+
+    const res = await fetch('http://localhost:4000/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+    if (!res.ok) {
+      alert(data.error || "Login failed");
+      return;
+    }
+    localStorage.setItem('token', data.token);
+    alert("Login successful!");
+    // Optionally, add code to redirect user here
+  };
+
+  // --- JSX UI ---
   return (
     <Container>
       <LogoBlock>
-        <img src="/SnowLEXlogo/LogoWhite.png" alt="home logo" />  
+        <img src="/SnowLEXlogo/LogoWhite.png" alt="home logo" />
       </LogoBlock>
       <Title>Welcome back!</Title>
       <Subtitle>Log in to your existent account of LadyJustice</Subtitle>
-      <Form>
-        <Input type="text" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+      <Form onSubmit={handleSubmit}>
+        <Input name="email" type="text" placeholder="Email" />
+        <Input name="password" type="password" placeholder="Password" />
         <Row>
           <CheckboxLabel>
             <input type="checkbox" />
