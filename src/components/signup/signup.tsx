@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 
 const Container = styled.div`
   min-height: 100vh;
@@ -107,26 +106,105 @@ const LoginLink = styled(Link)`
 `;
 
 export default function Signup() {
+  // state for all inputs
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [acceptTerms, setAcceptTerms] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    const body = {
+      name,
+      surname,
+      email,
+      phoneNumber: phone,
+      password,
+      confirmPassword,
+      acceptTerms,
+    };
+
+    try {
+      const res = await fetch("http://localhost:4000/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert(data.error || "Sign up failed");
+      } else {
+        alert("Account created! You can login now.");
+        window.location.href = "/login"; // redirect to login page
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server error. Please try again.");
+    }
+  }
+
   return (
     <Container>
       <LogoBlock>
-        <img src="/SnowLEXlogo/5_No_background.png" alt="home logo" />  // I changed your method of uploading image
+        <LogoImg src="/SnowLEXlogo/5_No_background.png" alt="home logo" />
       </LogoBlock>
       <Title>Let's Get Started !</Title>
       <Subtitle>
         Create an account to LadyJustice AI to get all features
       </Subtitle>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Row2>
-          <Input type="text" placeholder="Name" style={{ marginBottom: 0 }} />
-          <Input type="text" placeholder="Surname" style={{ marginBottom: 0 }} />
+          <Input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={{ marginBottom: 0 }}
+          />
+          <Input
+            type="text"
+            placeholder="Surname"
+            value={surname}
+            onChange={(e) => setSurname(e.target.value)}
+            style={{ marginBottom: 0 }}
+          />
         </Row2>
-        <Input type="email" placeholder="Email Address" />
-        <Input type="text" placeholder="Phone Number" />
-        <Input type="password" placeholder="Password" />
-        <Input type="password" placeholder="Confirm Password" />
+        <Input
+          type="email"
+          placeholder="Email Address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="text"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Confirm Password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
         <CheckboxLabel>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={acceptTerms}
+            onChange={(e) => setAcceptTerms(e.target.checked)}
+          />
           I accept the Terms of use & Privacy Policy
         </CheckboxLabel>
         <Button type="submit">SIGN UP</Button>
