@@ -85,20 +85,20 @@ const SeeOtherBtn = styled.button`
 `;
 
 const Right = styled.div`
-  flex: 1 1 32%;
+  flex: 1 1 42%;
   min-width: 260px;
-  background: #fff; // If you want only the image block boxed!
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(44,45,94,0.07);
+  background: #f7f7fc;; // If you want only the image block boxed!
+  border-radius: 19px;
+  box-shadow: 0 2px 8px rgba(144, 144, 175, 0.07);
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const PlaceholderImg = styled.div`
-  width: 120px;
+  width: 140px;
   height: 120px;
-  background: #e7e9f7;
+  background: #dae6f1ff;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -124,10 +124,10 @@ export default function SignupPromo() {
             Create your account today<br />and get started for free!
           </Headline>
           <FeaturesGrid>
-            <Feature><CheckMark>✔️</CheckMark> Text</Feature>
-            <Feature><CheckMark>✔️</CheckMark> Text</Feature>
-            <Feature><CheckMark>✔️</CheckMark> Text</Feature>
-            <Feature><CheckMark>✔️</CheckMark> Text</Feature>
+            <Feature><CheckMark>✔️</CheckMark> Access 1700+ Services </Feature>
+            <Feature><CheckMark>✔️</CheckMark> Save Your Favorite Guides</Feature>
+            <Feature><CheckMark>✔️</CheckMark> Personalized Content</Feature>
+            <Feature><CheckMark>✔️</CheckMark> Free Email Alerts</Feature>
           </FeaturesGrid>
           <ButtonRow>
             <GetStartedBtn>Get started</GetStartedBtn>
@@ -136,8 +136,9 @@ export default function SignupPromo() {
         </Left>
         <Right>
           <PlaceholderImg>
-            {/* Replace with your actual image if needed */}
-            <span role="img" aria-label="promo-img">🖼️</span>
+            {/* Replace with your actual image if needed <span role="img" aria-label="promo-img"><img src="/SnowLEXimages/ladyjustice3xe.png" /></span>*/}
+            
+            <img src="/SnowLEXimages/ladyjustice3xe.png" alt="get started"/>
           </PlaceholderImg>
         </Right>
       </Layout>
