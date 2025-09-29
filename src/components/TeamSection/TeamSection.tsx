@@ -195,7 +195,10 @@ export default function TeamSection() {
     <Section>
       <Container>
         <Title>Meet our team members</Title>
-        <Subtitle>Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.</Subtitle>
+        <Subtitle>Our team is composed entirely of experienced lawyers dedicated to providing you with expert guidance.
+
+We understand that legal matters require precision, clarity, and deep knowledge. Each member of our firm brings a specialized 
+background and a shared commitment to delivering the highest quality legal information and solutions. Get to know the professionals who are here to serve you</Subtitle>
         <CardRow>
           <Card>
             <Avatar><img src="/SnowLEXteam/FoundersFrederickKyle.jpg" alt="Frederick Kyle" /></Avatar>
