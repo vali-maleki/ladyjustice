@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-//import logoImg from "../assets/5_No_background.png"; 
+import { Link, useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -10,11 +9,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-const LogoImg = styled.img`
-  height: 170px;
-  margin-bottom: 20px;
 `;
 
 const Title = styled.h1`
@@ -106,19 +100,21 @@ const LogoBlock = styled.div`
 `;
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+
   // --- Login form handler ---
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
 
     const payload = {
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      password: (form.elements.namedItem('password') as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      password: (form.elements.namedItem("password") as HTMLInputElement).value,
     };
 
-    const res = await fetch('http://localhost:4000/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("http://localhost:4000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
@@ -127,12 +123,11 @@ export default function LoginPage() {
       alert(data.error || "Login failed");
       return;
     }
-    localStorage.setItem('token', data.token);
-    alert("Login successful!");
-    // Optionally, add code to redirect user here
+
+    localStorage.setItem("token", data.token);
+    navigate("/dashboard"); // ✅ redirect after login
   };
 
-  // --- JSX UI ---
   return (
     <Container>
       <LogoBlock>
@@ -148,14 +143,17 @@ export default function LoginPage() {
             <input type="checkbox" />
             Remember Me
           </CheckboxLabel>
-          <Link to="/forgot-password" style={{ color: "#bab6d2", textDecoration: "none" }}>
+          <Link
+            to="/forgot-password"
+            style={{ color: "#bab6d2", textDecoration: "none" }}
+          >
             Forget Password ?
           </Link>
         </Row>
         <Button type="submit">LOGIN</Button>
       </Form>
       <FooterText>
-        Dont have an account?
+        Don’t have an account?
         <SignUpLink to="/signup">Sign Up</SignUpLink>
       </FooterText>
     </Container>
