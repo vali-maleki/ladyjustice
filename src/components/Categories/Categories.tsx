@@ -91,42 +91,42 @@ export default function Categories() {
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>🗂️</span>
             </IconCircle>
             <CardTitle>KELA</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>Focuses on legal and service information related to the Social Insurance Institution of Finland (KELA), covering benefits and social security matters.</CardDesc>
           </Card>
           <Card>
             <IconCircle>
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>🏠</span>
             </IconCircle>
             <CardTitle>Supported Housing</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>Provides details and legal guidance concerning housing arrangements with support services for individuals with specific needs.</CardDesc>
           </Card>
           <Card>
             <IconCircle>
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>🎓</span>
             </IconCircle>
             <CardTitle>Student Housing</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>Covers legal aspects and resources for housing specifically tailored to students, including tenancy agreements and rights.</CardDesc>
           </Card>
           <Card>
             <IconCircle>
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>⚖️</span>
             </IconCircle>
             <CardTitle>Disputes</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>A general category offering information and resources for resolving various legal conflicts and disagreements, including mediation and litigation.</CardDesc>
           </Card>
           <Card>
             <IconCircle>
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>👨‍💼</span>
             </IconCircle>
             <CardTitle>For Landlord</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>Contains legal advice, guides, and resources tailored to property owners and lessors regarding their rights, responsibilities, and tenant management.</CardDesc>
           </Card>
           <Card>
             <IconCircle>
               <span role="img" aria-label="icon" style={{fontSize: "1.6rem", color: "#c2c6db"}}>🏡</span>
             </IconCircle>
             <CardTitle>For Tenant</CardTitle>
-            <CardDesc>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar.</CardDesc>
+            <CardDesc>Offers comprehensive legal information on tenant rights, leasing agreements, rental issues, and protecting one's interests as a renter.</CardDesc>
           </Card>
         </CardGrid>
       </Container>
