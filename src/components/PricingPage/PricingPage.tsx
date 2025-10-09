@@ -125,12 +125,14 @@ export default function PricingPage() {
       <Label>PRICING</Label>
       <Title>Affordable pricing plans</Title>
       <Subtitle>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu egestas morbi sem vulputate etiam facilisis pellentesque ut quis.
+        Great value, clear pricing. Get the powerful features of snowLEX at a price that works for you. 
+        Start with our Free plan, choose Once-off for a single project, or unlock everything with Monthly access. 
+        No surprises, just straightforward plans designed for your success.
       </Subtitle>
       <Cards>
         <Card>
           <PriceLabel>Free</PriceLabel>
-          <Price>$0</Price>
+          <Price>€0</Price>
           <PriceSubtext>Billed monthly</PriceSubtext>
           <Button current>Current</Button>
           <Features>
@@ -143,7 +145,7 @@ export default function PricingPage() {
         </Card>
         <Card>
           <PriceLabel>Once – off</PriceLabel>
-          <Price>$199</Price>
+          <Price>€199</Price>
           <PriceSubtext>Billed monthly</PriceSubtext>
           <Button>Get started</Button>
           <Features>
@@ -156,7 +158,7 @@ export default function PricingPage() {
         </Card>
         <Card>
           <PriceLabel>Monthly</PriceLabel>
-          <Price>$399</Price>
+          <Price>€399</Price>
           <PriceSubtext>Billed monthly</PriceSubtext>
           <Button>Get started</Button>
           <Features>

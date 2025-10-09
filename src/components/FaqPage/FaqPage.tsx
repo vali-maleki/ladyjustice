@@ -65,24 +65,28 @@ const FaqAnswer = styled.div`
 `;
 
 const FAQ_HEADER = "Frequently Asked Questions";
-const FAQ_SUBTITLE = "Cras tincidunt lobortis feugiat vivamus at morbi leo urna molestie atole elementum eu facilisis faucibus interdum posuere.";
+const FAQ_SUBTITLE = "Here are the most frequently asked questions.";
 
 const faqs = [
   {
-    q: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+    q: "What is the difference between the 'Free' and 'Once-off' plans? ?",
+    a: "The Free plan gives you access to all analytics features but limits you to 10 questions per month and does not allow for disputes. The Once-off plan provides unlimited questions, allows for one dispute, and includes everything in the Free plan, making it ideal for a focused, short-term project.",
   },
   {
-    q: "Lorem ipsum dolor sit amet consectetur adipiscing eli ?",
-    a: "Pellentesque ac velit facilisis, gravida neque sed, accumsan ipsum. Etiam suscipit elit nec dictum hendrerit.",
+    q: "How does snowLEX ensure my data and privacy are protected?",
+    a: "We employ industry-standard encryption protocols and strict access controls to protect your information. Your data is never shared with third parties without your explicit consent. For more details, please refer to our full Privacy Policy under the 'About' section.",
   },
   {
-    q: "Lorem ipsum dolor sit amet consectetur ?",
-    a: "Integer at diam pretium, venenatis enim a, bibendum nulla. Vivamus ut pulvinar justo.",
+    q: "Can I upgrade or downgrade my plan at any time?",
+    a: "Yes, absolutely! You can upgrade from the Free or Once-off plan to the Monthly plan at any time through your account dashboard. Downgrades or cancellations for the Monthly plan can also be processed anytime, and the change will take effect at the end of your current billing cycle.",
   },
   {
-    q: "Lorem ipsum dolor sit amet consectetur adipiscing eli dictum ?",
-    a: "Donec consequat justo vel accumsan aliquam. Ut lacinia efficitur neque, nec porttitor ipsum.",
+    q: " What does 'unlimited disputes' mean in the Monthly plan?",
+    a: "The unlimited disputes feature allows you to flag any analysis or finding within the application that you believe is incorrect or needs further review. Our support and analyst teams will then prioritize investigating and resolving these issues as often as you need, without any limitation.",
+  },
+  {
+    q: " Is there a mobile application available for snowLEX?",
+    a: "Yes, both the Once-off and Monthly plans include access to our dedicated mobile app, available on both iOS and Android. This allows you to monitor your key metrics, ask questions, and check on disputes while you're away from your desktop.",
   },
 ];
 

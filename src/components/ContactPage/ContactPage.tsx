@@ -139,7 +139,8 @@ export default function ContactPage() {
       <InfoPanel>
         <Headline>Get in touch today</Headline>
         <Subtitle>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit nulla adipiscing tincidunt interdum tellus du.
+          Have a question, a partnership inquiry, or need support? Complete the contact form with your details, 
+          and a member of the snowLEX team will follow up with you promptly. We look forward to connecting.
         </Subtitle>
         <InfoList>
           <InfoRow>
@@ -152,7 +153,7 @@ export default function ContactPage() {
           </InfoRow>
           <InfoRow>
             <InfoIcon>📍</InfoIcon>
-            794 Mcallister St<br />Helsinki, 94102
+            Maria 01,<br />Helsinki, 94102
           </InfoRow>
         </InfoList>
       </InfoPanel>

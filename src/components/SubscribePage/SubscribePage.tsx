@@ -231,7 +231,7 @@ export default function SubscribePage() {
 
   return (
     <PageWrap>
-      <Heading>Subscribe to LadyJustice AI</Heading>
+      <Heading>Subscribe to SnowLEX AI</Heading>
 
       <Section>
         {/* Left form */}
@@ -321,14 +321,14 @@ export default function SubscribePage() {
         <PaymentBox>
           <PayHeader>
             <PayTitle>SUBSCRIBE TO</PayTitle>
-            <Subscription>LadyJustice AI Once – off</Subscription>
+            <Subscription>SnowLEX AI Once – off</Subscription>
           </PayHeader>
 
           <Divider />
           <Divider />
           <TotalRow>
             <span>Total</span>
-            <strong>$199</strong>
+            <strong>€199</strong>
           </TotalRow>
 
           <TermsWrap>
