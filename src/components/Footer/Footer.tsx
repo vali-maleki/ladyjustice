@@ -129,7 +129,7 @@ export default function Footer() {
             <LogoImg src="/SnowLEXlogo/NoBackgroundLogo.png" alt="Snowlex logo" />
           </Logo>
           <LogoDesc>
-            Lorem ipsum dolor sit amet consectetur adipising elit aliquam mauris sed mo
+            SnowLEX AI is a product of Justice4.0
           </LogoDesc>
           <SocialRow>
             <SocialIcon href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -250,7 +250,7 @@ export default function Footer() {
         </Col>
       </Container>
       <CopyrightBar>
-        Copyright © 2024 Justice 4.0 | All Rights Reserved | Terms and Conditions | Privacy Policy
+        Copyright © 2025 Justice4.0  | All Rights Reserved | Terms and Conditions | Privacy Policy
       </CopyrightBar>
     </FooterSection>
   );

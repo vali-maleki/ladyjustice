@@ -156,7 +156,7 @@ export default function Signup() {
       </LogoBlock>
       <Title>Let's Get Started !</Title>
       <Subtitle>
-        Create an account to LadyJustice AI to get all features
+        Create an account to SnowLEX AI to get all features
       </Subtitle>
       <Form onSubmit={handleSubmit}>
         <Row2>

@@ -153,7 +153,7 @@ export default function ContactPage() {
           </InfoRow>
           <InfoRow>
             <InfoIcon>📍</InfoIcon>
-            Maria 01,<br />Helsinki, 94102
+            Peter Kalmin Street 5, 00560<br />Helsinki, Finland.
           </InfoRow>
         </InfoList>
       </InfoPanel>

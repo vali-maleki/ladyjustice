@@ -101,7 +101,7 @@ export default function HeroSection() {
     <HeroContainer>
       <TextColumn>
         <BigTitle>
-          snowLEX AI<br />
+          SnowLEX AI<br />
           your Legal Assistant<br />
           in your pocket
         </BigTitle>
